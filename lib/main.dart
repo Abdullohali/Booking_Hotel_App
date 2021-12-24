@@ -1,4 +1,4 @@
-import 'package:bookinghotelapp/screens/homepage/home_one_page.dart';
+import 'package:bookinghotelapp/screen/homepage/home_one_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
