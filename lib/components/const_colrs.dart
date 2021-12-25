@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 class constColor {
   static const kBlack19 = Color(0xff191A1D);
   static const kWhite = Color(0xffFFFFFF);
+  static const kblackW = Color(0xff1E1E1F);
   static const kGrey = Color(0xff999999);
   static const kOrangeGradient =
-      LinearGradient(colors: [Color(0xffFF6161), Color(0xffFF61DC)]);
+      LinearGradient(colors: [Color(0xffFF61DC),Color(0xffFF6161)]);
   static const korangeGradientOpaque =
       LinearGradient(colors: [Color(0xffFFC7A7), Color(0xffFFD579)]);
   static const kBlacText = Color(0xff393939);

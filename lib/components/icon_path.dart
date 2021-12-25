@@ -1,12 +1,16 @@
-class Icons{
+class Iconspath{
   static const String arrowRight = "assets/icons/angle-right.svg";
   static const String arrowLeft = "assets/icons/chevron-right.svg";
   static const String arrowBottom = "assets/icons/Home-Search-Navi-Search-caret-down";
   static const String favorite = "assets/icons/favorite.svg";
   static const String mainUser = "assets/icons/Home-Navi-Main-User.svg";
+  static const String mainUser2 = "assets/icons/Navi-Main-Navi-Main-User.svg";
   static const String mainNotification = "assets/icons/Home-Navi-Main-Notification.svg";
+  static const String mainNotification2 = "assets/icons/Navi-Main-Notification.svg";
   static const String mainSearch = "assets/icons/Home-Navi-Main-Search.svg";
+  static const String mainSearch2 = "assets/icons/Search-Navi-Main-Navi-Main-Search.svg";
   static const String mainhome = "assets/icons/Home-Navi-Main-home.svg";
+  static const String mainhome2 = "assets/icons/Search-Navi-Main-Navi-Main-Home.svg";
   static const String searchFilter = "assets/icons/Home-Search-Navi-Search-Filter.svg";
   static const String hottelcon = "assets/icons/Hotelicon.svg";
   static const String iconFavorite = "assets/icons/IconHeard.svg";
