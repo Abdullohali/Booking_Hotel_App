@@ -1,24 +1,29 @@
-import 'package:bookinghotelapp/screen/homepage/home_one_page.dart';
-import 'package:flutter/material.dart';
+import 'components/import_package.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+     MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => BottomNavBarProvider()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      themeMode: ThemeMode.system,
+      theme: MyTheme.lighttheme,
+      darkTheme: MyTheme.darktheme,
       routes: {
-        '/': (_) => const HomeOne(),
+        '/': (_) => const MainPage(),
       },
     );
   }

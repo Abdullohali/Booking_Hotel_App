@@ -1,6 +1,4 @@
-import 'package:bookinghotelapp/components/edge_insets.dart';
-import 'package:bookinghotelapp/components/size_config.dart';
-import 'package:flutter/material.dart';
+import 'import_package.dart';
 
 
 ListView lisviewbuilder(double height, double width, double mLeft, double mTop,

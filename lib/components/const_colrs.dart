@@ -11,7 +11,7 @@ class constColor {
       LinearGradient(colors: [Color(0xffFFC7A7), Color(0xffFFD579)]);
   static const kBlacText = Color(0xff393939);
   static const kGreyDark = Color(0xff616167);
-  static const kGreyBottom = Color(0xffE3E6EC);
+  static const kGreyBottom = Color(0xffE6E9EF);
   static const kBlack = Color(0xff191A1D);
   static const kOffWhite = Color(0xffF5F5F5);
   static const kPeach = Color(0xffFFB489);

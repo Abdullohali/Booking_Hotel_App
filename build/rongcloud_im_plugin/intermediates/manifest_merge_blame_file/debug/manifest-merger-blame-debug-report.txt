@@ -1,0 +1,22 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="io.rong.flutter.imlib" >
+4
+5    <uses-sdk android:minSdkVersion="20" />
+5-->/home/fazildjanov23/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/rongcloud_im_plugin-5.1.6/android/src/main/AndroidManifest.xml
+6
+7    <application
+7-->/home/fazildjanov23/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/rongcloud_im_plugin-5.1.6/android/src/main/AndroidManifest.xml:4:5-12:19
+8        android:allowBackup="true"
+8-->/home/fazildjanov23/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/rongcloud_im_plugin-5.1.6/android/src/main/AndroidManifest.xml:5:9-35
+9        android:supportsRtl="true" >
+9-->/home/fazildjanov23/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/rongcloud_im_plugin-5.1.6/android/src/main/AndroidManifest.xml:6:9-35
+10        <meta-data
+10-->/home/fazildjanov23/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/rongcloud_im_plugin-5.1.6/android/src/main/AndroidManifest.xml:8:9-10:61
+11            android:name="rc.imflutter"
+11-->/home/fazildjanov23/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/rongcloud_im_plugin-5.1.6/android/src/main/AndroidManifest.xml:9:13-40
+12            android:value="io.rong.flutter.imlib.Version" />
+12-->/home/fazildjanov23/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/rongcloud_im_plugin-5.1.6/android/src/main/AndroidManifest.xml:10:13-58
+13    </application>
+14
+15</manifest>
