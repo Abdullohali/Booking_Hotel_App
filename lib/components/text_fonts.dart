@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'import_package.dart';
 
 googleFonts(double fontsize, Color color, FontWeight weight) {
   return GoogleFonts.nunito(

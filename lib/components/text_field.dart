@@ -1,6 +1,4 @@
-import 'package:bookinghotelapp/components/text_fonts.dart';
-import 'package:flutter/material.dart';
-import 'package:bookinghotelapp/components/const_colrs.dart';
+import 'import_package.dart';
 
 TextFormField textFormfield(String hint,var controller) {
   return TextFormField(

@@ -1,14 +1,5 @@
-import 'package:bookinghotelapp/components/const_colrs.dart';
-import 'package:bookinghotelapp/components/drop_down.dart';
-import 'package:bookinghotelapp/components/edge_insets.dart';
-import 'package:bookinghotelapp/components/list_view.dart';
-import 'package:bookinghotelapp/components/size_config.dart';
-import 'package:bookinghotelapp/components/text_field.dart';
-import 'package:bookinghotelapp/components/text_fonts.dart';
-import 'package:bookinghotelapp/provider/bottom_nav_provider.dart';
-import 'package:bookinghotelapp/widgets/bottom_bar.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import '../../components/import_package.dart';
+
 
 class HomeOne extends StatelessWidget {
   const HomeOne({Key? key}) : super(key: key);

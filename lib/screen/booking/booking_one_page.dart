@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-
+import '../../components/import_package.dart';
 class BookingOne extends StatelessWidget {
   const BookingOne({ Key? key }) : super(key: key);
 

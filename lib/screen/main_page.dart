@@ -1,7 +1,5 @@
-import 'package:bookinghotelapp/provider/bottom_nav_provider.dart';
-import 'package:bookinghotelapp/widgets/bottom_bar.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import '../../components/import_package.dart';
+
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);

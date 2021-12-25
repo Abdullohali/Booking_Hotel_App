@@ -1,8 +1,5 @@
-import 'package:bookinghotelapp/components/icon_path.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:provider/provider.dart';
-import '../provider/bottom_nav_provider.dart';
+import '../../components/import_package.dart';
+
 
 class BottomBar extends StatelessWidget {
   BottomBarProvider? model;

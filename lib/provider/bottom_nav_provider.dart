@@ -1,7 +1,4 @@
-import 'package:bookinghotelapp/screen/booking/booking_one_page.dart';
-import 'package:bookinghotelapp/screen/homepage/home_one_page.dart';
-import 'package:flutter/material.dart';
-
+import '../components/import_package.dart';
 class BottomBarProvider extends ChangeNotifier {
   int _currentIndex = 0;
   List<Widget> _screens = [

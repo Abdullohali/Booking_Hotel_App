@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'import_package.dart';
 
 class constColor {
   static const kBlack19 = Color(0xff191A1D);

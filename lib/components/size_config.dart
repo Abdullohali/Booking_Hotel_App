@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'import_package.dart';
 
 class SizeConfig {
   static late MediaQueryData _mediaQueryData;

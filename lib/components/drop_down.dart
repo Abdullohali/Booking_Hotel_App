@@ -1,7 +1,4 @@
-import 'package:bookinghotelapp/components/size_config.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:bookinghotelapp/components/const_colrs.dart';
+import 'import_package.dart';
 
 class DropDown {
   static String selectValue = "Guests";
