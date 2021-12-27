@@ -17,4 +17,7 @@ class constColor {
   static const kPeach = Color(0xffFFB489);
   static const kGreyLight  = Color(0xffDFDEDE);
   static const kBackground  = Color(0xffE5E5E5);
+  static const kgrey  = Color(0xffE3E6EC);
+  static const kgreyIcon  = Color(0xffC4C4C4);
+
 }

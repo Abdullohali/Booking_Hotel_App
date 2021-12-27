@@ -1,4 +1,5 @@
 import 'package:bookinghotelapp/provider/texfield_provider.dart';
+import 'package:bookinghotelapp/widgets/padding_widget.dart';
 
 import '../../components/import_package.dart';
 
@@ -30,9 +31,9 @@ class HomeOne extends StatelessWidget {
                             fit: BoxFit.cover),
                       ),
                     ),
-                    Padding(
-                      padding: FromLTRB.getEgdeInsets(18, 96, 26, 0),
-                      child: Text(
+                    getpadding(
+                      [18, 96, 26, 0],
+                      Text(
                         "Find place that gives\n you ultimate calm",
                         style: GoogleFonts.nunito(
                             fontSize: getUniqueHeight(36),
@@ -40,9 +41,9 @@ class HomeOne extends StatelessWidget {
                             color: constColor.kWhite),
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: getUniqueHeight(300)),
-                      child: Container(
+                    getpadding(
+                      [0, 300, 0, 0],
+                      Container(
                         height: getUniqueHeight(304),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.vertical(
@@ -139,9 +140,9 @@ class HomeOne extends StatelessWidget {
                     ),
                   ],
                 ),
-                Padding(
-                  padding: FromLTRB.getEgdeInsets(21, 35, 207, 0),
-                  child: Text(
+                getpadding(
+                  [21, 35, 207, 0],
+                  Text(
                     "Recommended",
                     style:
                         googleFonts(22, constColor.kBlacText, FontWeight.w700),

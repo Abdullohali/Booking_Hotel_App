@@ -230,6 +230,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "shadow",
+      "rootUri": "file:///home/fazildjanov23/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/shadow-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "simple_shadow",
+      "rootUri": "file:///home/fazildjanov23/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/simple_shadow-0.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///home/fazildjanov23/snap/flutter/common/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -308,7 +320,7 @@
       "languageVersion": "2.15"
     }
   ],
-  "generated": "2021-12-25T14:26:58.293226Z",
+  "generated": "2021-12-26T11:18:52.056985Z",
   "generator": "pub",
   "generatorVersion": "2.15.0"
 }

@@ -2,11 +2,11 @@ import 'package:bookinghotelapp/components/import_package.dart';
 
 class MyTheme {
   static final darktheme = ThemeData(
-    scaffoldBackgroundColor: constColor.kGreyBottom,
+    scaffoldBackgroundColor: constColor.kBlack,
     colorScheme: const ColorScheme.dark(),
   );
   static final lighttheme = ThemeData(
-    scaffoldBackgroundColor: constColor.kBlack,
+    scaffoldBackgroundColor: constColor.kgrey,
     colorScheme: const ColorScheme.light(),
   );
 }
