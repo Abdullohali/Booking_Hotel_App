@@ -103,28 +103,7 @@ ListView listviewbuilder2() {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           SvgPicture.asset(Iconspath.favorite),
-                          Container(
-                            height: getUniqueHeight(23),
-                            width: getUniqueWidth(50),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(40),
-                                gradient: constColor.kOrangeGradient),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "4.5",
-                                  style: googleFonts(12, FontWeight.w800,
-                                      color: constColor.kWhite),
-                                ),
-                                const Icon(
-                                  Icons.star,
-                                  color: constColor.kWhite,
-                                  size: 20,
-                                ),
-                              ],
-                            ),
-                          ),
+                          starcontainer("4.5"),
                         ],
                       ),
                     ),
@@ -164,4 +143,29 @@ ListView listviewbuilder2() {
       );
     },
   );
+}
+
+Container starcontainer(String number) {
+  return Container(
+                          height: getUniqueHeight(23),
+                          width: getUniqueWidth(50),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(40),
+                              gradient: constColor.kOrangeGradient),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                number,
+                                style: googleFonts(12, FontWeight.w800,
+                                    color: constColor.kWhite),
+                              ),
+                              const Icon(
+                                Icons.star,
+                                color: constColor.kWhite,
+                                size: 20,
+                              ),
+                            ],
+                          ),
+                        );
 }

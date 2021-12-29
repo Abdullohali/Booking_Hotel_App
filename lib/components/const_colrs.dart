@@ -20,5 +20,6 @@ class constColor {
   static const kgrey  = Color(0xffE3E6EC);
   static const kgreyIcon  = Color(0xffC4C4C4);
   static const kgreydollar  = Color(0xff434343);
+  static const kpink  = Colors.pink;
 
 }

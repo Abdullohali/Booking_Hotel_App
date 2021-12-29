@@ -1,4 +1,6 @@
 import 'package:bookinghotelapp/screen/googlemap/map.page.dart';
+import 'package:bookinghotelapp/screen/registerOne/register_one.dart';
+import 'package:bookinghotelapp/screen/selectromm/select_room.dart';
 
 import 'components/import_package.dart';
 
@@ -23,9 +25,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       themeMode: ThemeMode.system,
       theme: MyTheme.lighttheme,
+      
       darkTheme: MyTheme.darktheme,
       routes: {
-        '/': (_) => const MainPage(),
+        '/': (_) => RegisterOne(),
       },
     );
   }

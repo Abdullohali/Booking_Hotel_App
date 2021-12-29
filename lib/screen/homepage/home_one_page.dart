@@ -1,4 +1,5 @@
 import 'package:bookinghotelapp/provider/texfield_provider.dart';
+import 'package:bookinghotelapp/widgets/buttons.dart';
 import 'package:bookinghotelapp/widgets/padding_widget.dart';
 
 import '../../components/import_package.dart';
@@ -117,23 +118,7 @@ class HomeOne extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            InkWell(
-                              child: Container(
-                                alignment: Alignment.center,
-                                margin: FromLTRB.getEgdeInsets(0, 38, 0, 0),
-                                height: getUniqueHeight(70),
-                                width: getUniqueWidth(338),
-                                decoration: BoxDecoration(
-                                  gradient: constColor.kOrangeGradient,
-                                  borderRadius: BorderRadius.circular(50),
-                                ),
-                                child: Text(
-                                  "Search a Room",
-                                  style: googleFonts(
-                                      24, FontWeight.w800,color:  constColor.kWhite,),
-                                ),
-                              ),
-                            ),
+                            inkwellgredientbutton("Search a room",70,338),
                           ],
                         ),
                       ),
@@ -168,4 +153,6 @@ class HomeOne extends StatelessWidget {
       ),
     );
   }
+
+
 }

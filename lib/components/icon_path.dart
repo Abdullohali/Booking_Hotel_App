@@ -1,4 +1,4 @@
-class Iconspath{
+class Iconspath {
   static const String noti = "assets/icons/bell.svg";
   static const String noti2 = "assets/icons/bell_active.svg";
   static const String favorite = "assets/icons/favorite.svg";
@@ -14,6 +14,19 @@ class Iconspath{
   static const String user1 = "assets/icons/user.svg";
   static const String user2 = "assets/icons/user_active.svg";
   static const String fvorits = "assets/icons/your_favorite.svg";
+  static const String left = "assets/icons/chevron-left.svg";
+  static const String hotelIcon = "assets/icons/HotelIcon.svg";
+  static const String square = "assets/icons/h-square.svg";
+  static const String person = "assets/icons/person.svg";
+  static const String rectangle = "assets/icons/Rectangle.svg";
+  static const String location = "assets/icons/location.svg";
+  static List pathicon = [
+  "assets/icons/room1.svg",
+   "assets/icons/room3.svg",
+   "assets/icons/room4.svg",
+   "assets/icons/room2.svg",
+   "assets/icons/room5.svg",
+  ];
   // static const String arrowLeft = "assets/icons/chevron-right.svg";
   // static const String arrowBottom = "assets/icons/Home-Search-Navi-Search-caret-down";
   // static const String favorite = "assets/icons/favorite.svg";
