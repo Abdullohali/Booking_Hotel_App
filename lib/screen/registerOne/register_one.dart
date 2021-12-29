@@ -1,7 +1,6 @@
 import 'package:bookinghotelapp/components/import_package.dart';
 import 'package:bookinghotelapp/components/string_list.dart';
 import 'package:bookinghotelapp/widgets/buttons.dart';
-import 'package:flutter/material.dart';
 
 class RegisterOne extends StatelessWidget {
   const RegisterOne({Key? key}) : super(key: key);

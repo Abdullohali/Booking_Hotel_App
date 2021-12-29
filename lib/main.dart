@@ -1,5 +1,6 @@
 import 'package:bookinghotelapp/screen/googlemap/map.page.dart';
 import 'package:bookinghotelapp/screen/registerOne/register_one.dart';
+import 'package:bookinghotelapp/screen/reservation/reservation.dart';
 import 'package:bookinghotelapp/screen/selectromm/select_room.dart';
 
 import 'components/import_package.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       
       darkTheme: MyTheme.darktheme,
       routes: {
-        '/': (_) => RegisterOne(),
+        '/': (_) => ReservationPage(),
       },
     );
   }
