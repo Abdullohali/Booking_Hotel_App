@@ -40,6 +40,8 @@ dependencies:
   google_fonts: ^2.1.1
   shadow: ^1.0.0
   simple_shadow: ^0.3.0
+  get: ^4.6.1
+  http: ^0.13.4
 
 dev_dependencies:
   flutter_test:

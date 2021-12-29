@@ -28,7 +28,7 @@ class DropDown {
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(50))),
       elevation: 10,
       style: GoogleFonts.nunito(
-          fontSize: getUniqueHeight(14),
+          fontSize: getUniqueHeight(12),
           fontWeight: FontWeight.bold,
           color: constColor.kGrey),
       value: Selectvalue,

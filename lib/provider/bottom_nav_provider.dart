@@ -1,15 +1,17 @@
+import 'package:bookinghotelapp/screen/googlemap/map.page.dart';
+
 import '../components/import_package.dart';
 
 class BottomNavBarProvider extends ChangeNotifier {
   int _currentIndex = 0;
-  final screens = [
+   final screens = [
     HomeOne(),
     BookingOne(),
-    HomeOne(),
+    MapPage(),
     BookingOne(),
   ];
   set currentTab(int tab) {
-    this._currentIndex = tab;
+    _currentIndex = tab;
     notifyListeners();
   }
 
@@ -18,6 +20,6 @@ class BottomNavBarProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  int get currentTab => this._currentIndex;
-  get currentScreens => this.screens[this._currentIndex];
+  int get currentTab => _currentIndex;
+  get currentScreens => screens[_currentIndex];
 }

@@ -130,7 +130,7 @@ class HomeOne extends StatelessWidget {
                                 child: Text(
                                   "Search a Room",
                                   style: googleFonts(
-                                      24, constColor.kWhite, FontWeight.w800),
+                                      24, FontWeight.w800,color:  constColor.kWhite,),
                                 ),
                               ),
                             ),
@@ -145,7 +145,7 @@ class HomeOne extends StatelessWidget {
                   Text(
                     "Recommended",
                     style:
-                        googleFonts(22, constColor.kBlacText, FontWeight.w700),
+                        googleFonts(22, FontWeight.w700,color: constColor.kBlacText),
                   ),
                 ),
                 Container(

@@ -1,3 +1,5 @@
+import 'package:bookinghotelapp/screen/googlemap/map.page.dart';
+
 import 'components/import_package.dart';
 
 void main() {

@@ -1,6 +1,6 @@
 import 'import_package.dart';
 
-googleFonts(double fontsize, Color color, FontWeight weight) {
+googleFonts(double fontsize, FontWeight weight,{Color? color}) {
   return GoogleFonts.nunito(
-      fontSize: fontsize, color: color, fontWeight: weight);
+      fontSize: fontsize, fontWeight: weight,color: color);
 }

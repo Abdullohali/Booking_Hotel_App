@@ -1,6 +1,5 @@
 import 'import_package.dart';
 
-
 ListView lisviewbuilder(double height, double width, double mLeft, double mTop,
     double mRight, double mBottom, String img) {
   return ListView.builder(
@@ -8,15 +7,13 @@ ListView lisviewbuilder(double height, double width, double mLeft, double mTop,
     shrinkWrap: true,
     itemBuilder: (context, index) {
       return Container(
-        margin: FromLTRB.getEgdeInsets(mLeft,mTop,mRight,mBottom),
+        margin: FromLTRB.getEgdeInsets(mLeft, mTop, mRight, mBottom),
         height: getUniqueHeight(height),
         width: getUniqueWidth(width),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           image: DecorationImage(
-              image: NetworkImage(
-                  "$img$index"),
-              fit: BoxFit.cover),
+              image: NetworkImage("$img$index"), fit: BoxFit.cover),
         ),
       );
     },
