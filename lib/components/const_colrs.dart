@@ -6,7 +6,7 @@ class constColor {
   static const kblackW = Color(0xff1E1E1F);
   static const kGrey = Color(0xff999999);
   static const kOrangeGradient =
-      LinearGradient(colors: [Color(0xffFF61DC),Color(0xffFF6161)]);
+      LinearGradient(colors: [Color(0xffFF6161),Color(0xffFF61DC)]);
   static const korangeGradientOpaque =
       LinearGradient(colors: [Color(0xffFFC7A7), Color(0xffFFD579)]);
   static const kBlacText = Color(0xff393939);

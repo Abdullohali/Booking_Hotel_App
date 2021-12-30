@@ -8,4 +8,9 @@ class Controllers{
   static TextEditingController postCodecontroller = TextEditingController();
   static TextEditingController countrycontroller = TextEditingController();
   static TextEditingController phonecontroller = TextEditingController();
+  //For Payment page
+  static TextEditingController cardcontroller = TextEditingController();
+  static TextEditingController cardnamecontroller = TextEditingController();
+  static TextEditingController expirycontroller = TextEditingController();
+  static TextEditingController cvvcontroller = TextEditingController();
 }
