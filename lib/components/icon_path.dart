@@ -22,6 +22,8 @@ class Iconspath {
   static const String location = "assets/icons/location.svg";
   static const String visa = "assets/icons/visa.svg";
   static const String code = "assets/icons/code_card.svg";
+  static const String check = "assets/icons/check.svg";
+  static const String star = "assets/icons/grey_star.svg";
   static List pathicon = [
   "assets/icons/room1.svg",
    "assets/icons/room3.svg",

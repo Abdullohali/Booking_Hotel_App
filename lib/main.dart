@@ -1,4 +1,7 @@
+import 'package:bookinghotelapp/provider/stepper_provider.dart';
+import 'package:bookinghotelapp/screen/complete/complete_page.dart';
 import 'package:bookinghotelapp/screen/googlemap/map.page.dart';
+import 'package:bookinghotelapp/screen/hotellist/hotel_list_page.dart';
 import 'package:bookinghotelapp/screen/payment/payment_page.dart';
 import 'package:bookinghotelapp/screen/registerOne/register_one.dart';
 import 'package:bookinghotelapp/screen/reservation/reservation.dart';
@@ -11,6 +14,7 @@ void main() {
      MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => BottomNavBarProvider()),
+        ChangeNotifierProvider(create: (_) => StepperProvider()),
       ],
       child: const MyApp(),
     ),
@@ -30,7 +34,7 @@ class MyApp extends StatelessWidget {
       
       darkTheme: MyTheme.darktheme,
       routes: {
-        '/': (_) => PaymentPage(),
+        '/': (_) => HotelList(),
       },
     );
   }

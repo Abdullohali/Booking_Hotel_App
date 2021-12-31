@@ -2,6 +2,7 @@ import 'package:bookinghotelapp/components/controllers.dart';
 import 'package:bookinghotelapp/components/import_package.dart';
 import 'package:bookinghotelapp/widgets/buttons.dart';
 import 'package:bookinghotelapp/widgets/icon_stepper.dart';
+import 'package:bookinghotelapp/widgets/steppers.dart';
 import 'package:bookinghotelapp/widgets/texformfields.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/route_manager.dart';
@@ -15,9 +16,7 @@ class ReservationPage extends StatefulWidget {
 }
 
 class _ReservationPageState extends State<ReservationPage> {
-  int activeStep = 0;
-  // Initial step set to 5.
-  int upperBound = 3;
+
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +44,7 @@ class _ReservationPageState extends State<ReservationPage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              iconstepper(),
+              steppers.iconstepper(),
               Form(
                   child: Column(
                 children: [
@@ -58,7 +57,7 @@ class _ReservationPageState extends State<ReservationPage> {
                   textformfield("Mobile Phone",Controllers.phonecontroller),
                 ],
               )),
-              inkwellgredientbutton("Go to Payment", 70, 338)
+              inkwellgredientbutton("Go to Payment", 70, double.infinity)
             ],
           ),
         ),
@@ -67,24 +66,5 @@ class _ReservationPageState extends State<ReservationPage> {
   }
 
 
-  IconStepper iconstepper() {
-    return IconStepper(
-      enableNextPreviousButtons: false,
-      lineLength: 20,
-      activeStepColor: constColor.kgrey,
-      activeStepBorderColor: constColor.kOffWhite,
-      stepColor: constColor.kgrey,
-      lineColor: constColor.kGreyDark,
-      scrollingDisabled: false,
-      // enableStepTapping: false,
-      lineDotRadius: 0.6,
-      icons: stepper.iconlist(activeStep),
-      activeStep: activeStep,
-      onStepReached: (index) {
-        setState(() {
-          activeStep = index;
-        });
-      },
-    );
-  }
+ 
 }

@@ -139,7 +139,7 @@ class HomeOne extends StatelessWidget {
                   width: getUniqueWidth(400),
                   child: lisviewbuilder(
                       getUniqueHeight(185),
-                      getUniqueWidth(265),
+                      getUniqueWidth(350),
                       0,
                       0,
                       20,

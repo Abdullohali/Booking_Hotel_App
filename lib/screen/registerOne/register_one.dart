@@ -105,7 +105,7 @@ class RegisterOne extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            inkwellgredientbutton("Select", 60, 185)
+                            inkwellgredientbutton("Select", 60, 185 )
                           ],
                         ),
                       )

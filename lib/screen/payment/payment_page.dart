@@ -1,8 +1,13 @@
+
 import 'package:bookinghotelapp/components/controllers.dart';
 import 'package:bookinghotelapp/components/import_package.dart';
+import 'package:bookinghotelapp/components/types.dart';
+import 'package:bookinghotelapp/provider/stepper_provider.dart';
 import 'package:bookinghotelapp/widgets/buttons.dart';
+import 'package:bookinghotelapp/widgets/steppers.dart';
 import 'package:bookinghotelapp/widgets/texformfields.dart';
 import 'package:im_stepper/stepper.dart';
+import 'package:provider/provider.dart';
 import '../../widgets/icon_stepper.dart';
 
 class PaymentPage extends StatefulWidget {
@@ -13,9 +18,6 @@ class PaymentPage extends StatefulWidget {
 }
 
 class _PaymentPageState extends State<PaymentPage> {
-  int activeStep = 0;
-  int upperBound = 3;
-  bool value = false;
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -40,7 +42,7 @@ class _PaymentPageState extends State<PaymentPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            iconstepper(),
+          steppers.iconstepper(),
             Container(
               margin: FromLTRB.getEgdeInsets(18, 40, 18, 0),
               height: getUniqueHeight(198),
@@ -102,10 +104,10 @@ class _PaymentPageState extends State<PaymentPage> {
               child: Row(
                 children: [
                   Checkbox(
-                    value: value,
+                    value: Types.value,
                     onChanged: (e) {
                       setState(() {
-                        value = e!;
+                        Types.value = e!;
                       });
                     },
                     checkColor: constColor.kpink,
@@ -119,31 +121,10 @@ class _PaymentPageState extends State<PaymentPage> {
                 ],
               ),
             ),
-            inkwellgredientbutton("Go to Confirmation", 70, 338),
+            inkwellgredientbutton("Go to Confirmation", 70, double.infinity),
           ],
         ),
       ),
-    );
-  }
-
-  IconStepper iconstepper() {
-    return IconStepper(
-      enableNextPreviousButtons: false,
-      lineLength: 20,
-      activeStepColor: constColor.kgrey,
-      activeStepBorderColor: constColor.kOffWhite,
-      stepColor: constColor.kgrey,
-      lineColor: constColor.kGreyDark,
-      scrollingDisabled: false,
-      // enableStepTapping: false,
-      lineDotRadius: 0.6,
-      icons: stepper.iconlist(activeStep),
-      activeStep: activeStep,
-      onStepReached: (index) {
-        setState(() {
-          activeStep = index;
-        });
-      },
     );
   }
 }
