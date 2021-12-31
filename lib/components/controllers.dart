@@ -13,4 +13,6 @@ class Controllers{
   static TextEditingController cardnamecontroller = TextEditingController();
   static TextEditingController expirycontroller = TextEditingController();
   static TextEditingController cvvcontroller = TextEditingController();
+  //for search pages
+  static TextEditingController searchcontroller = TextEditingController();
 }
