@@ -1,14 +1,15 @@
 import 'package:bookinghotelapp/provider/stepper_provider.dart';
 import 'package:bookinghotelapp/screen/complete/complete_page.dart';
+import 'package:bookinghotelapp/screen/deals/deals_page.dart';
 import 'package:bookinghotelapp/screen/filter/filter_page.dart';
 import 'package:bookinghotelapp/screen/googlemap/map.page.dart';
-import 'package:bookinghotelapp/screen/horelsearch/hotel_search.dart';
 import 'package:bookinghotelapp/screen/hotellist/hotel_list_page.dart';
 import 'package:bookinghotelapp/screen/payment/payment_page.dart';
 import 'package:bookinghotelapp/screen/registerOne/register_one.dart';
 import 'package:bookinghotelapp/screen/reservation/reservation.dart';
 import 'package:bookinghotelapp/screen/searchmap/search_in_map.dart';
 import 'package:bookinghotelapp/screen/selectromm/select_room.dart';
+import 'package:bookinghotelapp/screen/user/user_page.dart';
 
 import 'components/import_package.dart';
 
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
       
       darkTheme: MyTheme.darktheme,
       routes: {
-        '/': (_) => FilterPage(),
+        '/': (_) => Userpage(),
       },
     );
   }

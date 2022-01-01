@@ -1,4 +1,4 @@
-#Fri Dec 31 15:18:06 UZT 2021
+#Fri Dec 31 16:25:40 UZT 2021
 base.0=/home/fazildjanov23/Documents/flutter/Booking_Hotel_App/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

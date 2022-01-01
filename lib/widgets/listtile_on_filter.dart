@@ -28,3 +28,15 @@ ListTile listtileforfilter(String title,{String? trailing}) {
               title: Text(title,style: googleFonts(20, FontWeight.w600),),
             );
   }
+  Padding listtileforDeals(String title) {
+    return Padding(
+      padding: FromLTRB.getEgdeInsets(0, 30, 0, 29),
+      child: ListTile(
+        title: Text(
+          title,
+          style: googleFonts(18, FontWeight.w600),
+        ),
+        trailing: const Icon(Icons.arrow_forward_ios,color: constColor.kGrey,),
+      ),
+    );
+  }
