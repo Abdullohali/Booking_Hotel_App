@@ -1,6 +1,7 @@
 import 'package:bookinghotelapp/components/hotel_formula.dart';
 import 'package:bookinghotelapp/models/hote_model.dart';
 import 'package:bookinghotelapp/provider/texfield_provider.dart';
+import 'package:bookinghotelapp/screen/filter/filter_page.dart';
 import 'package:bookinghotelapp/screen/googlemap/map.page.dart';
 import 'package:bookinghotelapp/widgets/inkwell.dart';
 import 'package:bookinghotelapp/widgets/listtile_booking.dart';
@@ -24,8 +25,8 @@ class BookingOne extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-             listtileformapandbooking(),
-              Container(
+              listtileformapandbooking(),
+              SizedBox(
                 height: getUniqueHeight(50),
                 child: Row(
                   children: [
@@ -38,8 +39,8 @@ class BookingOne extends StatelessWidget {
                         ),
                       ),
                     ),
-                    getinkwell(
-                      getpadding(
+                    InkWell(
+                      child: getpadding(
                         [6, 0, 0, 0],
                         Text(
                           "Filter",
@@ -48,6 +49,12 @@ class BookingOne extends StatelessWidget {
                             FontWeight.w400,
                             color: constColor.kgreyIcon,
                           ),
+                        ),
+                      ),
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => const FilterPage(),
                         ),
                       ),
                     ),
@@ -75,17 +82,17 @@ class BookingOne extends StatelessWidget {
                 Text("Near the beaches",
                     style: googleFonts(22, FontWeight.w700)),
               ),
-              Container(
+              SizedBox(
                 height: getUniqueHeight(159),
                 width: getUniqueWidth(413),
-                child: listviewbookone1(),
+                child: listviewbookone1(context),
               ),
               Container(
                 margin: FromLTRB.getEgdeInsets(0, 39, 0, 0),
                 height: getUniqueHeight(647),
                 width: double.infinity,
                 color: constColor.kBlack19,
-                child: listviewbuilder2(),
+                child: listviewbuilder2(context),
               )
             ],
           ),

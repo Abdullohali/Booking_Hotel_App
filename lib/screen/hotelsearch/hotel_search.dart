@@ -26,7 +26,7 @@ class HotelSearcch extends StatelessWidget {
                 margin: FromLTRB.getEgdeInsets(0, 39, 0, 0),
                 height: getUniqueHeight(647),
                 width: double.infinity,
-                child: listviewbuilder2(),
+                child: listviewbuilder2(context),
               )
             ],
           ),

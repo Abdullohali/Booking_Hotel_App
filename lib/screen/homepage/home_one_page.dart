@@ -1,3 +1,4 @@
+import 'package:bookinghotelapp/components/controllers.dart';
 import 'package:bookinghotelapp/provider/texfield_provider.dart';
 import 'package:bookinghotelapp/widgets/buttons.dart';
 import 'package:bookinghotelapp/widgets/padding_widget.dart';
@@ -63,8 +64,8 @@ class HomeOne extends StatelessWidget {
                                   height: getUniqueHeight(55),
                                   width: getUniqueWidth(220),
                                   margin: FromLTRB.getEgdeInsets(16, 42, 18, 0),
-                                  child: textFormfield("Place",
-                                      TexfieldProvider.placeController),
+                                  child: textFormfield(
+                                      "Place", Controllers.placeController),
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
@@ -95,7 +96,7 @@ class HomeOne extends StatelessWidget {
                                   width: getUniqueWidth(220),
                                   margin: FromLTRB.getEgdeInsets(16, 23, 18, 0),
                                   child: textFormfield(
-                                      "Date", TexfieldProvider.dateController),
+                                      "Date", Controllers.dateController),
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
@@ -118,7 +119,16 @@ class HomeOne extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            inkwellgredientbutton("Search a room",70,338),
+                            InkWell(
+                              child: inkwellgredientbutton(
+                                  "Search a room", 70, 338),
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (_) => BookingOne()));
+                              },
+                            ),
                           ],
                         ),
                       ),
@@ -129,8 +139,8 @@ class HomeOne extends StatelessWidget {
                   [21, 35, 207, 0],
                   Text(
                     "Recommended",
-                    style:
-                        googleFonts(22, FontWeight.w700,color: constColor.kBlacText),
+                    style: googleFonts(22, FontWeight.w700,
+                        color: constColor.kBlacText),
                   ),
                 ),
                 Container(
@@ -153,6 +163,4 @@ class HomeOne extends StatelessWidget {
       ),
     );
   }
-
-
 }

@@ -1,5 +1,6 @@
 import 'package:bookinghotelapp/components/controllers.dart';
 import 'package:bookinghotelapp/components/import_package.dart';
+import 'package:bookinghotelapp/screen/payment/payment_page.dart';
 import 'package:bookinghotelapp/widgets/buttons.dart';
 import 'package:bookinghotelapp/widgets/icon_stepper.dart';
 import 'package:bookinghotelapp/widgets/steppers.dart';
@@ -16,8 +17,6 @@ class ReservationPage extends StatefulWidget {
 }
 
 class _ReservationPageState extends State<ReservationPage> {
-
-
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -25,18 +24,21 @@ class _ReservationPageState extends State<ReservationPage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: constColor.kgrey,
+        // backgroundColor: constColor.kgrey,
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back_ios,
-            color: constColor.kBlacText,
+            // color: constColor.kBlacText,
           ),
-          onPressed: () {},
+          onPressed: () {
+                            Navigator.pop(context);
+
+          },
         ),
         centerTitle: true,
         title: Text(
           "Reservation",
-          style: googleFonts(28, FontWeight.w700, color: constColor.kBlacText),
+          style: googleFonts(28, FontWeight.w700,),
         ),
       ),
       body: Padding(
@@ -48,23 +50,25 @@ class _ReservationPageState extends State<ReservationPage> {
               Form(
                   child: Column(
                 children: [
-                  textformfield("First Name",Controllers.namecontroller),
-                  textformfield("Last Name",Controllers.lastNamecontroller),
-                  textformfield("Email Addres",Controllers.emailcontroller),
-                  textformfield("Addres",Controllers.adresscontroller),
-                  textformfield("Post Code",Controllers.postCodecontroller),
-                  textformfield("Country",Controllers.countrycontroller),
-                  textformfield("Mobile Phone",Controllers.phonecontroller),
+                  textformfield("First Name", Controllers.namecontroller),
+                  textformfield("Last Name", Controllers.lastNamecontroller),
+                  textformfield("Email Addres", Controllers.emailcontroller),
+                  textformfield("Addres", Controllers.adresscontroller),
+                  textformfield("Post Code", Controllers.postCodecontroller),
+                  textformfield("Country", Controllers.countrycontroller),
+                  textformfield("Mobile Phone", Controllers.phonecontroller),
                 ],
               )),
-              inkwellgredientbutton("Go to Payment", 70, double.infinity)
+              InkWell(
+                child:
+                    inkwellgredientbutton("Go to Payment", 70, SizeConfig.screenWidth),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => const PaymentPage())),
+              )
             ],
           ),
         ),
       ),
     );
   }
-
-
- 
 }

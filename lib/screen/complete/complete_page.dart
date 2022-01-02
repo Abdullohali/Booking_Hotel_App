@@ -1,5 +1,7 @@
 import 'package:bookinghotelapp/components/import_package.dart';
 import 'package:bookinghotelapp/components/string_list.dart';
+import 'package:bookinghotelapp/screen/deals/deals_page.dart';
+import 'package:bookinghotelapp/screen/hotellist/hotel_list_page.dart';
 import 'package:bookinghotelapp/widgets/buttons.dart';
 import 'package:bookinghotelapp/widgets/listview_bookinone.dart';
 import 'package:bookinghotelapp/widgets/simple_text.dart';
@@ -15,18 +17,20 @@ class CompletPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: constColor.kgrey,
+        // backgroundColor: constColor.kgrey,
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back_ios,
-            color: constColor.kBlacText,
+            // color: constColor.kBlacText,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         centerTitle: true,
         title: Text(
           "Reservation",
-          style: googleFonts(28, FontWeight.w700, color: constColor.kBlacText),
+          style: googleFonts(28, FontWeight.w700),
         ),
       ),
       body: SingleChildScrollView(
@@ -86,7 +90,8 @@ class CompletPage extends StatelessWidget {
                   ],
                 ),
               ),
-              inkwellgredientbutton("Complete", 70, double.infinity),
+             InkWell(child: inkwellgredientbutton("Complete", 70, SizeConfig.screenWidth), onTap: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => const HotelList())),),
             ],
           ),
         ),

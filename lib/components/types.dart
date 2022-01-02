@@ -5,4 +5,5 @@ class Types {
   static bool valueforbreakfast = false;
   static bool valueforDeals = false;
   static bool valueforShow = false;
+  static bool valueoftheme = false;
 }

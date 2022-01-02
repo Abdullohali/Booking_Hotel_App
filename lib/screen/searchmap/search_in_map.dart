@@ -35,7 +35,7 @@ class SearchMap extends StatelessWidget {
                     child: Container(
                       height: getUniqueHeight(159),
                       width: getUniqueWidth(413),
-                      child: listviewbookone1(),
+                      child: listviewbookone1(context),
                     ),
                   )
                 ],

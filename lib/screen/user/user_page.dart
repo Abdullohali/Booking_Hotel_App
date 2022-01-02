@@ -19,8 +19,8 @@ class Userpage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  const CircleAvatar(
-                      radius: 30,
+                   CircleAvatar(
+                      radius: getUniqueHeight(30),
                       backgroundImage:
                           NetworkImage("https://source.unsplash.com/random")),
                   Padding(

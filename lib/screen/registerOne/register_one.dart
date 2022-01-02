@@ -1,5 +1,6 @@
 import 'package:bookinghotelapp/components/import_package.dart';
 import 'package:bookinghotelapp/components/string_list.dart';
+import 'package:bookinghotelapp/screen/reservation/reservation.dart';
 import 'package:bookinghotelapp/widgets/buttons.dart';
 
 class RegisterOne extends StatelessWidget {
@@ -11,18 +12,21 @@ class RegisterOne extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: constColor.kgrey,
+        // backgroundColor: constColor.kgrey,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios,
             color: constColor.kBlacText,
           ),
-          onPressed: () {},
+          onPressed: () {
+                            Navigator.pop(context);
+
+          },
         ),
         centerTitle: true,
         title: Text(
           "Mountain Resort",
-          style: googleFonts(28, FontWeight.w700, color: constColor.kBlacText),
+          style: googleFonts(28, FontWeight.w700),
         ),
       ),
       body: SingleChildScrollView(
@@ -60,7 +64,8 @@ class RegisterOne extends StatelessWidget {
                           children: [
                             Text(
                               "Standard King Room",
-                              style: googleFonts(22, FontWeight.w700),
+                              style: googleFonts(22, FontWeight.w700,
+                                  color: constColor.kBlacText),
                             ),
                             Image.asset("assets/images/Pricing.png")
                           ],
@@ -96,16 +101,24 @@ class RegisterOne extends StatelessWidget {
                                 children: [
                                   Text(
                                     "\$ 1480",
-                                    style: googleFonts(22, FontWeight.w600),
+                                    style: googleFonts(22, FontWeight.w600,
+                                        color: constColor.kBlacText),
                                   ),
                                   Text(
                                     "2 nights",
-                                    style: googleFonts(12, FontWeight.w400),
+                                    style: googleFonts(12, FontWeight.w400,
+                                        color: constColor.kBlacText),
                                   )
                                 ],
                               ),
                             ),
-                            inkwellgredientbutton("Select", 60, 185 )
+                            InkWell(
+                              child: inkwellgredientbutton("Select", 60, 185),
+                              onTap: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => const ReservationPage())),
+                            )
                           ],
                         ),
                       )

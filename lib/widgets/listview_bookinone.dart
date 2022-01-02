@@ -1,50 +1,55 @@
 import 'package:bookinghotelapp/components/import_package.dart';
+import 'package:bookinghotelapp/screen/selectromm/select_room.dart';
 import 'package:bookinghotelapp/widgets/inkwell.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 
-ListView listviewbookone1() {
+ListView listviewbookone1(context) {
   return ListView.builder(
       scrollDirection: Axis.horizontal,
       itemBuilder: (_, __) {
-        return Stack(
-          children: [
-            Container(
-              margin: FromLTRB.getEgdeInsets(5, 21, 19, 0),
-              height: getUniqueHeight(117),
-              width: getUniqueWidth(197),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(getUniqueWidth(30)),
-                image: DecorationImage(
-                    image: NetworkImage(
-                      "https://source.unsplash.com/1600x900/?hotel/$__",
-                    ),
-                    fit: BoxFit.cover),
+        return InkWell(
+          child: Stack(
+            children: [
+              Container(
+                margin: FromLTRB.getEgdeInsets(5, 21, 19, 0),
+                height: getUniqueHeight(117),
+                width: getUniqueWidth(197),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(getUniqueWidth(30)),
+                  image: DecorationImage(
+                      image: NetworkImage(
+                        "https://source.unsplash.com/1600x900/?hotel/$__",
+                      ),
+                      fit: BoxFit.cover),
+                ),
               ),
-            ),
-            Positioned(
-              top: 12,
-              left: 130,
-              child: starcontainer("4.5"),
-            ),
-            Positioned(
-                top: 100,
-                left: 10,
-                child: Text(
-                  "Mountain Resort",
-                  style: googleFonts(16, FontWeight.w700,
-                      color: constColor.kWhite),
-                ))
-          ],
+              Positioned(
+                top: 12,
+                left: 130,
+                child: starcontainer("4.5"),
+              ),
+              Positioned(
+                  top: 100,
+                  left: 10,
+                  child: Text(
+                    "Mountain Resort",
+                    style: googleFonts(16, FontWeight.w700,
+                        color: constColor.kWhite),
+                  ))
+            ],
+          ),
+          onTap: () => Navigator.push(
+              context, MaterialPageRoute(builder: (_) => const SelectRoom())),
         );
       });
 }
 
-ListView listviewbuilder2() {
+ListView listviewbuilder2(context) {
   return ListView.builder(
     itemBuilder: (_, __) {
-      return getinkwell(
-        Container(
+      return InkWell(
+        child: Container(
           height: getUniqueHeight(289),
           width: getUniqueWidth(338),
           margin: FromLTRB.getEgdeInsets(18, 43, 18, 0),
@@ -119,6 +124,8 @@ ListView listviewbuilder2() {
             ],
           ),
         ),
+        onTap: () => Navigator.push(
+            context, MaterialPageRoute(builder: (_) => const SelectRoom())),
       );
     },
   );

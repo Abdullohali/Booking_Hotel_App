@@ -15,4 +15,7 @@ class Controllers{
   static TextEditingController cvvcontroller = TextEditingController();
   //for search pages
   static TextEditingController searchcontroller = TextEditingController();
+  //for home page
+  static TextEditingController placeController = TextEditingController();
+  static TextEditingController dateController = TextEditingController();
 }

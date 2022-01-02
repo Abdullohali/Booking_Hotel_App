@@ -1,4 +1,5 @@
 import 'package:bookinghotelapp/components/import_package.dart';
+import 'package:bookinghotelapp/screen/registerOne/register_one.dart';
 import 'package:bookinghotelapp/widgets/buttons.dart';
 import 'package:bookinghotelapp/widgets/listview_bookinone.dart';
 
@@ -9,7 +10,7 @@ class SelectRoom extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      body:SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
@@ -145,7 +146,11 @@ class SelectRoom extends StatelessWidget {
                 ],
               ),
             ),
-            inkwellgredientbutton("Select Rooms",70,338)
+            InkWell(
+              child: inkwellgredientbutton("Select Rooms", 70, 338),
+              onTap: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => const RegisterOne())),
+            )
           ],
         ),
       ),

@@ -1,4 +1,5 @@
 import 'package:bookinghotelapp/components/import_package.dart';
+import 'package:bookinghotelapp/screen/filter/filter_page.dart';
 import 'package:bookinghotelapp/widgets/inkwell.dart';
 import 'package:bookinghotelapp/widgets/listtile_booking.dart';
 import 'package:bookinghotelapp/widgets/listview_bookinone.dart';
@@ -28,8 +29,8 @@ class MapPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    getinkwell(
-                      getpadding(
+                    InkWell(
+                      child: getpadding(
                         [6, 0, 0, 0],
                         Text(
                           "Filter",
@@ -39,6 +40,10 @@ class MapPage extends StatelessWidget {
                             color: constColor.kgreyIcon,
                           ),
                         ),
+                      ),
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) => const FilterPage()),
                       ),
                     ),
                     getpadding(
@@ -73,7 +78,7 @@ class MapPage extends StatelessWidget {
                     child: Container(
                       height: getUniqueHeight(159),
                       width: getUniqueWidth(413),
-                      child: listviewbookone1(),
+                      child: listviewbookone1(context),
                     ),
                   )
                 ],

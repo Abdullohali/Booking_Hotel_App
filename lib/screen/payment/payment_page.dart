@@ -3,6 +3,7 @@ import 'package:bookinghotelapp/components/controllers.dart';
 import 'package:bookinghotelapp/components/import_package.dart';
 import 'package:bookinghotelapp/components/types.dart';
 import 'package:bookinghotelapp/provider/stepper_provider.dart';
+import 'package:bookinghotelapp/screen/complete/complete_page.dart';
 import 'package:bookinghotelapp/widgets/buttons.dart';
 import 'package:bookinghotelapp/widgets/steppers.dart';
 import 'package:bookinghotelapp/widgets/texformfields.dart';
@@ -25,18 +26,21 @@ class _PaymentPageState extends State<PaymentPage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: constColor.kgrey,
+        // backgroundColor: constColor.kgrey,
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back_ios,
             color: constColor.kBlacText,
           ),
-          onPressed: () {},
+          onPressed: () {
+                            Navigator.pop(context);
+
+          },
         ),
         centerTitle: true,
         title: Text(
           "Reservation",
-          style: googleFonts(28, FontWeight.w700, color: constColor.kBlacText),
+          style: googleFonts(28, FontWeight.w700,),
         ),
       ),
       body: SingleChildScrollView(
@@ -121,7 +125,8 @@ class _PaymentPageState extends State<PaymentPage> {
                 ],
               ),
             ),
-            inkwellgredientbutton("Go to Confirmation", 70, double.infinity),
+           InkWell(child: inkwellgredientbutton("Go to Confirmation", 70, SizeConfig.screenWidth), onTap: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => const CompletPage())),),
           ],
         ),
       ),

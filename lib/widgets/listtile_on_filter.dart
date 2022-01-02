@@ -1,4 +1,6 @@
- import 'package:bookinghotelapp/components/import_package.dart';
+
+import 'package:bookinghotelapp/components/import_package.dart';
+import 'package:bookinghotelapp/components/types.dart';
 
 ListTile listtileforfilter(String title,{String? trailing}) {
     return ListTile(
