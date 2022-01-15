@@ -1,7 +1,7 @@
 import 'import_package.dart';
 
 class constColor {
-  static const kBlack19 = Color(0xff191A1D);
+  static const kBlack19 = Color(0xff191A1D);  
   static const kWhite = Color(0xffFFFFFF);
   static const kblackW = Color(0xff1E1E1F);
   static const kGrey = Color(0xff999999);

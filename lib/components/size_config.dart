@@ -19,12 +19,12 @@ class SizeConfig {
 double getUniqueHeight(double inputHeight) {
   double screenHeight = SizeConfig.screenHeight;
   // 812 is the layout height that designer use
-  return (inputHeight / 825.0) * screenHeight;
+  return (inputHeight / screenHeight) * screenHeight;
 }
 
 // Get the proportionate height as per screen size
 double getUniqueWidth(double inputWidth) {
   double screenWidth = SizeConfig.screenWidth;
   // 375 is the layout width that designer use
-  return (inputWidth / 454.0) * screenWidth;
+  return (inputWidth / screenWidth) * screenWidth;
 }

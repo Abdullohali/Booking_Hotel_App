@@ -147,15 +147,8 @@ class HomeOne extends StatelessWidget {
                   margin: FromLTRB.getEgdeInsets(20, 20, 0, 0),
                   height: getUniqueHeight(185),
                   width: getUniqueWidth(400),
-                  child: lisviewbuilder(
-                      getUniqueHeight(185),
-                      getUniqueWidth(350),
-                      0,
-                      0,
-                      20,
-                      0,
-                      "https://source.unsplash.com/1600x900/?hotel/"),
-                )
+                  child: const LisviewPage(),
+                ),
               ],
             ),
           ),

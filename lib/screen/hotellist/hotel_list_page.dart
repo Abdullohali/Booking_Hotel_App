@@ -14,21 +14,13 @@ class HotelList extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: FromLTRB.getEgdeInsets(18, 29, 18, 33),
-                child: searchtextfield()
-              ),
+                  padding: FromLTRB.getEgdeInsets(18, 29, 18, 33),
+                  child: searchtextfield()),
               Container(
                 color: constColor.kBlacText,
                 height: getUniqueHeight(302),
                 width: double.infinity,
-                child: lisviewbuilder(
-                    getUniqueHeight(185),
-                    getUniqueWidth(350),
-                    18,
-                    78,
-                    20,
-                    39,
-                    "https://source.unsplash.com/1600x900/?hotel/"),
+                child: const LisviewPage(),
               ),
               Padding(
                 padding: FromLTRB.getEgdeInsets(0, 20, 299, 0),
@@ -40,15 +32,7 @@ class HotelList extends StatelessWidget {
               SizedBox(
                 height: getUniqueHeight(240),
                 width: double.infinity,
-                child: lisviewbuilder(
-                  getUniqueHeight(185),
-                  getUniqueWidth(350),
-                  18,
-                  18,
-                  20,
-                  39,
-                  "https://source.unsplash.com/1600x900/?hotel/",
-                ),
+                child: LisviewPage(),
               ),
             ],
           ),
