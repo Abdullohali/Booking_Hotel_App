@@ -2,7 +2,7 @@
 
 Padding textformfield(String hint,TextEditingController controller) {
     return Padding(
-      padding: FromLTRB.getEgdeInsets(20, 20, 20, 0),
+      padding: FromLTRB.getEgdeInsets(0, 20, 0, 0),
       child: TextFormField(
         controller: controller,
         decoration: InputDecoration(

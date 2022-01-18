@@ -10,7 +10,7 @@ class HotelList extends StatelessWidget {
 
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
+        child: SingleChildScrollView( 
           child: Column(
             children: [
               Padding(

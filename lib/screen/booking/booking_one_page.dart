@@ -59,7 +59,7 @@ class BookingOne extends StatelessWidget {
                       ),
                     ),
                     getpadding(
-                      [300, 0, 0, 0],
+                      [270, 0, 0, 0],
                       InkWell(
                         child: Text(
                           "Map",
