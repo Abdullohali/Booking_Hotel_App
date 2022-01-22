@@ -1,6 +1,5 @@
 import 'package:bookinghotelapp/components/hotel_formula.dart';
 import 'package:bookinghotelapp/models/hote_model.dart';
-import 'package:bookinghotelapp/provider/texfield_provider.dart';
 import 'package:bookinghotelapp/screen/filter/filter_page.dart';
 import 'package:bookinghotelapp/screen/googlemap/map.page.dart';
 import 'package:bookinghotelapp/widgets/inkwell.dart';

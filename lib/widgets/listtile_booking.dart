@@ -1,6 +1,5 @@
 import 'package:bookinghotelapp/components/controllers.dart';
 import 'package:bookinghotelapp/components/import_package.dart';
-import 'package:bookinghotelapp/provider/texfield_provider.dart';
 
 ListTile listtileformapandbooking() {
     return ListTile(

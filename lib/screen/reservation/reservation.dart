@@ -1,5 +1,6 @@
 import 'package:bookinghotelapp/components/controllers.dart';
 import 'package:bookinghotelapp/components/import_package.dart';
+import 'package:bookinghotelapp/components/types.dart';
 import 'package:bookinghotelapp/screen/payment/payment_page.dart';
 import 'package:bookinghotelapp/widgets/buttons.dart';
 import 'package:bookinghotelapp/widgets/icon_stepper.dart';
@@ -18,6 +19,12 @@ class ReservationPage extends StatefulWidget {
 
 class _ReservationPageState extends State<ReservationPage> {
   @override
+  void initState() {
+    super.initState();
+    Types.activeStep = 0;
+  }
+
+  @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
 
@@ -31,14 +38,16 @@ class _ReservationPageState extends State<ReservationPage> {
             // color: constColor.kBlacText,
           ),
           onPressed: () {
-                            Navigator.pop(context);
-
+            Navigator.pop(context);
           },
         ),
         centerTitle: true,
         title: Text(
           "Reservation",
-          style: googleFonts(28, FontWeight.w700,),
+          style: googleFonts(
+            28,
+            FontWeight.w700,
+          ),
         ),
       ),
       body: Padding(
@@ -60,10 +69,13 @@ class _ReservationPageState extends State<ReservationPage> {
                 ],
               )),
               InkWell(
-                child:
-                    inkwellgredientbutton("Go to Payment", 70, SizeConfig.screenWidth),
-                onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => const PaymentPage())),
+                child: inkwellgredientbutton(
+                    "Go to Payment", 70, SizeConfig.screenWidth),
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => const PaymentPage()));
+                  Types.activeStep = 1;
+                },
               )
             ],
           ),

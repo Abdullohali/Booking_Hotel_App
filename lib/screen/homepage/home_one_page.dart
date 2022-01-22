@@ -1,5 +1,4 @@
 import 'package:bookinghotelapp/components/controllers.dart';
-import 'package:bookinghotelapp/provider/texfield_provider.dart';
 import 'package:bookinghotelapp/widgets/buttons.dart';
 import 'package:bookinghotelapp/widgets/padding_widget.dart';
 

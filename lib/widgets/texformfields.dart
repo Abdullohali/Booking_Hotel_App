@@ -1,10 +1,14 @@
  import 'package:bookinghotelapp/components/import_package.dart';
 
-Padding textformfield(String hint,TextEditingController controller) {
+Padding textformfield(String hint,TextEditingController controller,{var onchanged,TextInputType? types}) {
     return Padding(
       padding: FromLTRB.getEgdeInsets(0, 20, 0, 0),
       child: TextFormField(
+        onChanged: (e){
+          onchanged;
+        },
         controller: controller,
+        keyboardType: types,
         decoration: InputDecoration(
             enabledBorder: OutlineInputBorder(
               borderSide:
