@@ -24,4 +24,5 @@ class BottomnavbarCubit extends Cubit<BottomnavbarState> {
     pageindex = tapedIndex;
     emit(BottomnavbarInitial());
   }
+ 
 }

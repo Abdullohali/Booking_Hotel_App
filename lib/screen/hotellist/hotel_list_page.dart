@@ -18,19 +18,19 @@ class HotelList extends StatelessWidget {
                   child: searchtextfield()),
               Container(
                 color: constColor.kBlacText,
-                height: getUniqueHeight(302),
+                height: getUniqueHeight(200),
                 width: double.infinity,
                 child: const LisviewPage(),
               ),
               Padding(
-                padding: FromLTRB.getEgdeInsets(0, 20, 299, 0),
+                padding: FromLTRB.getEgdeInsets(0, 20, 299, 50),
                 child: Text(
                   "Deals",
                   style: googleFonts(22, FontWeight.w700),
                 ),
               ),
               SizedBox(
-                height: getUniqueHeight(240),
+                height: getUniqueHeight(200),
                 width: double.infinity,
                 child: LisviewPage(),
               ),

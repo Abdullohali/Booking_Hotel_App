@@ -2,6 +2,7 @@ import 'package:bookinghotelapp/components/import_package.dart';
 import 'package:bookinghotelapp/components/string_list.dart';
 import 'package:bookinghotelapp/screen/reservation/reservation.dart';
 import 'package:bookinghotelapp/widgets/buttons.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class RegisterOne extends StatelessWidget {
   const RegisterOne({Key? key}) : super(key: key);
@@ -52,7 +53,7 @@ class RegisterOne extends StatelessWidget {
                             top: Radius.circular(30),
                           ),
                           image: DecorationImage(
-                              image: NetworkImage(
+                              image: CachedNetworkImageProvider(
                                   "https://source.unsplash.com/random"),
                               fit: BoxFit.cover),
                         ),

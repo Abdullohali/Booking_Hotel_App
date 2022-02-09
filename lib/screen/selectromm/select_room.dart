@@ -2,9 +2,11 @@ import 'package:bookinghotelapp/components/import_package.dart';
 import 'package:bookinghotelapp/screen/registerOne/register_one.dart';
 import 'package:bookinghotelapp/widgets/buttons.dart';
 import 'package:bookinghotelapp/widgets/listview_bookinone.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class SelectRoom extends StatelessWidget {
-  const SelectRoom({Key? key}) : super(key: key);
+  var index;
+   SelectRoom({Key? key, this.index}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +48,7 @@ class SelectRoom extends StatelessWidget {
                   width: getUniqueWidth(150),
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage(
+                      image: CachedNetworkImageProvider(
                           "https://source.unsplash.com/1600x900/?hotel/$__"),
                       fit: BoxFit.cover,
                     ),

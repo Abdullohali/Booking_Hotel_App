@@ -1,6 +1,7 @@
 import 'package:bookinghotelapp/components/import_package.dart';
 import 'package:bookinghotelapp/widgets/divider.dart';
 import 'package:bookinghotelapp/widgets/listtile_on_user.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class Userpage extends StatelessWidget {
   const Userpage({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class Userpage extends StatelessWidget {
                    CircleAvatar(
                       radius: getUniqueHeight(30),
                       backgroundImage:
-                          NetworkImage("https://source.unsplash.com/random")),
+                          CachedNetworkImageProvider("https://source.unsplash.com/random")),
                   Padding(
                     padding: FromLTRB.getEgdeInsets(28, 0, 0, 0),
                     child: Text(

@@ -7,6 +7,7 @@ import 'package:bookinghotelapp/widgets/buttons.dart';
 import 'package:bookinghotelapp/widgets/listview_bookinone.dart';
 import 'package:bookinghotelapp/widgets/simple_text.dart';
 import 'package:bookinghotelapp/widgets/steppers.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class CompletPage extends StatefulWidget {
   const CompletPage({Key? key}) : super(key: key);
@@ -60,7 +61,7 @@ class _CompletPageState extends State<CompletPage> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
-                      image: NetworkImage("https://source.unsplash.com/random"),
+                      image: CachedNetworkImageProvider("https://source.unsplash.com/random"),
                       fit: BoxFit.cover),
                 ),
                 child: Row(

@@ -1,6 +1,7 @@
 import 'package:bookinghotelapp/models/hote_model.dart';
 import 'package:bookinghotelapp/screen/selectromm/select_room.dart';
 import 'package:bookinghotelapp/service/fetch_model.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 import 'import_package.dart';
 
@@ -11,7 +12,7 @@ class LisviewPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return FutureBuilder(
         future: HotelService().getHotel(),
-        builder: (context,AsyncSnapshot<List<Hotel>> snap) {
+        builder: (context, AsyncSnapshot<List<HotelModel>> snap) {
           return ListView.builder(
             scrollDirection: Axis.horizontal,
             shrinkWrap: true,
@@ -24,12 +25,17 @@ class LisviewPage extends StatelessWidget {
                     20,
                     0,
                   ),
-                  height: getUniqueHeight(getUniqueHeight(185)),
-                  width: getUniqueWidth(getUniqueWidth(350)),
+                  // height: getUniqueHeight(getUniqueHeight(75)),
+                  // width: getUniqueWidth(getUniqueWidth(300)),
                   decoration: BoxDecoration(
+                    color: constColor.kWhite,
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
-                        image: NetworkImage(snap.data![index].img.toString()), fit: BoxFit.cover),
+                      image: CachedNetworkImageProvider(
+                        "https://source.unsplash.com/1600x900/?hotel/$index",
+                      ),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   child: Padding(
                     padding: FromLTRB.getEgdeInsets(15, 122, 0, 5),
@@ -37,19 +43,19 @@ class LisviewPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Lux Hotel with a Pool",
+                          snap.data![index].name.toString(),
                           style: googleFonts(18, FontWeight.w700,
                               color: constColor.kWhite),
                         ),
                         Row(
                           children: [
                             Text(
-                              "Dubai",
+                              snap.data![index].address!.city.toString(),
                               style: googleFonts(14, FontWeight.w400,
                                   color: constColor.kWhite),
                             ),
                             Padding(
-                              padding: FromLTRB.getEgdeInsets(150, 0, 0, 0),
+                              padding: FromLTRB.getEgdeInsets(100, 0, 0, 0),
                               child: Row(
                                 children: [
                                   Text(
@@ -61,7 +67,7 @@ class LisviewPage extends StatelessWidget {
                                     child: Row(
                                       children: [
                                         Text(
-                                          "4.5",
+                                          snap.data![index].id.toString(),
                                           style: googleFonts(
                                               12, FontWeight.w600,
                                               color: constColor.kWhite),
@@ -82,7 +88,9 @@ class LisviewPage extends StatelessWidget {
                 onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (_) => const SelectRoom(),
+                    builder: (_) => SelectRoom(
+                      index: index,
+                    ),
                   ),
                 ),
               );
