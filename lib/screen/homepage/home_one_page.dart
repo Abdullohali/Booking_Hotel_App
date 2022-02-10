@@ -80,7 +80,7 @@ class HomeOne extends StatelessWidget {
                                   ),
                                   height: getUniqueHeight(55),
                                   width: getUniqueWidth(102),
-                                  margin: FromLTRB.getEgdeInsets(18, 42, 10, 0),
+                                  margin: FromLTRB.getEgdeInsets(1, 42, 10, 0),
                                   child: DropDown.dropdownButton(
                                       DropDown.dropdownItems,
                                       DropDown.selectValue),
@@ -111,7 +111,7 @@ class HomeOne extends StatelessWidget {
                                   ),
                                   height: getUniqueHeight(55),
                                   width: getUniqueWidth(102),
-                                  margin: FromLTRB.getEgdeInsets(18, 23, 10, 0),
+                                  margin: FromLTRB.getEgdeInsets(1, 23, 10, 0),
                                   child: DropDown.dropdownButton(
                                       DropDown.dropdownItems2,
                                       DropDown.selectValue2),
@@ -125,7 +125,7 @@ class HomeOne extends StatelessWidget {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (_) => BookingOne()));
+                                        builder: (_) =>const BookingOne()));
                               },
                             ),
                           ],
@@ -138,7 +138,7 @@ class HomeOne extends StatelessWidget {
                   [21, 35, 207, 0],
                   Text(
                     "Recommended",
-                    style: googleFonts(22, FontWeight.w700,
+                    style: googleFonts(20, FontWeight.w700,
                         color: constColor.kBlacText),
                   ),
                 ),
@@ -146,7 +146,7 @@ class HomeOne extends StatelessWidget {
                   margin: FromLTRB.getEgdeInsets(20, 20, 0, 0),
                   height: getUniqueHeight(185),
                   width: getUniqueWidth(400),
-                  child: const LisviewPage(),
+                  child: const LisviewPage()
                 ),
               ],
             ),

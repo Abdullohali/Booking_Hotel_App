@@ -7,7 +7,7 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => ThemeProvider()),
+        ChangeNotifierProvider(create: (_) => ThemeProvider()..initialize()),
       ],
       child: const MyApp(),
     ),
@@ -19,12 +19,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        themeMode: ThemeMode.system,
-        theme: ThemeProvider.theme ? MyTheme.lighttheme : MyTheme.darktheme,
-        darkTheme: MyTheme.darktheme,
-        home: const TitleSceen());
+    return Consumer<ThemeProvider>(builder: (context, provider, child) {
+      return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          themeMode: provider.thememode,
+          theme: ThemeData.light(),
+          darkTheme: MyTheme.darktheme,
+          home: const TitleSceen());
+    });
   }
 }

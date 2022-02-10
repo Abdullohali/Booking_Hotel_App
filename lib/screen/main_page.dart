@@ -30,7 +30,7 @@ class MainPage extends StatelessWidget {
             unselectedFontSize: getUniqueHeight(25),
             showUnselectedLabels: false,
             backgroundColor:
-                ThemeProvider.theme ? constColor.kgrey : constColor.kBlack,
+                ThemeProvider.currenttheme ? constColor.kgrey : constColor.kBlack,
             items: [
               BottomNavigationBarItem(
                 icon: _context.pageindex == 0

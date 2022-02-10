@@ -4,9 +4,14 @@ import 'package:bookinghotelapp/provider/theme_provider.dart';
 import 'package:bookinghotelapp/widgets/buttons.dart';
 import 'package:bookinghotelapp/widgets/listtile_on_filter.dart';
 
-class FilterPage extends StatelessWidget {
+class FilterPage extends StatefulWidget {
   const FilterPage({Key? key}) : super(key: key);
 
+  @override
+  State<FilterPage> createState() => _FilterPageState();
+}
+
+class _FilterPageState extends State<FilterPage> {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -23,7 +28,8 @@ class FilterPage extends StatelessWidget {
                       IconButton(
                           onPressed: () {
                             Navigator.pop(context);
-                          }, icon: const Icon(Icons.arrow_back_ios)),
+                          },
+                          icon: const Icon(Icons.arrow_back_ios)),
                       Text(
                         "Filter",
                         style: googleFonts(28, FontWeight.w700),
@@ -56,26 +62,33 @@ class FilterPage extends StatelessWidget {
                 switchlisttile("Breakfast Included", Types.valueforbreakfast),
                 switchlisttile("Deals", Types.valueforDeals),
                 switchlisttile("Only show available", Types.valueforShow),
-                SwitchListTile(
-                  activeColor: constColor.kpink,
-                  value: Types.valueoftheme,
-                  onChanged: (e) {
-                    if (Types.valueoftheme == false) {
-                      Provider.of<ThemeProvider>(context, listen: false)
-                          .changeTheme();
-                    } else {
-                      Provider.of<ThemeProvider>(context, listen: false)
-                          .returnTheme();
-                    }
-                  },
-                  title: Text(
-                    "Dark theme",
-                    style: googleFonts(20, FontWeight.w600),
-                  ),
-                ),
+                Consumer(builder: (context, provider, chid) {
+                  return SwitchListTile(
+                    activeColor: constColor.kpink,
+                    value: Types.valueoftheme,
+                    onChanged: (e) {
+                      if (Types.valueoftheme == false) {
+                        e = false;
+                        Types.valueoftheme = true;
+                        context.read<ThemeProvider>().changeTheme(e);
+                      } else {
+                        e = true;
+                        Types.valueoftheme = false;
+
+                        context.read<ThemeProvider>().changeTheme(e);
+                      }
+                      setState(() {});
+                    },
+                    title: Text(
+                      "Dark theme",
+                      style: googleFonts(20, FontWeight.w600),
+                    ),
+                  );
+                }),
                 Padding(
                   padding: FromLTRB.getEgdeInsets(0, 124, 0, 0),
-                  child: inkwellgredientbutton("Aplly", 70, SizeConfig.screenWidth),
+                  child: inkwellgredientbutton(
+                      "Aplly", 70, SizeConfig.screenWidth),
                 )
               ],
             ),

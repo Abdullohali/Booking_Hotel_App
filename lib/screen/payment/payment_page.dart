@@ -74,7 +74,7 @@ class _PaymentPageState extends State<PaymentPage> {
                             ],
                           ),
                           Padding(
-                            padding: FromLTRB.getEgdeInsets(0, 45, 0, 9),
+                            padding: FromLTRB.getEgdeInsets(0, 45, 0, 7),
                             child: Text(
                               Controllers.cardcontroller.text.isEmpty
                                   ? "1245 3442 5244 5125"

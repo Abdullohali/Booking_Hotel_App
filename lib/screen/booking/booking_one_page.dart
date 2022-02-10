@@ -1,14 +1,11 @@
-import 'package:bookinghotelapp/components/hotel_formula.dart';
-import 'package:bookinghotelapp/models/hote_model.dart';
+
 import 'package:bookinghotelapp/screen/filter/filter_page.dart';
 import 'package:bookinghotelapp/screen/googlemap/map.page.dart';
 import 'package:bookinghotelapp/widgets/inkwell.dart';
 import 'package:bookinghotelapp/widgets/listtile_booking.dart';
 import 'package:bookinghotelapp/widgets/listview_bookinone.dart';
 import 'package:bookinghotelapp/widgets/padding_widget.dart';
-import 'package:bookinghotelapp/widgets/progress_indicator.dart';
-import 'package:dio/dio.dart';
-import 'package:flutter/cupertino.dart';
+
 
 import '../../components/import_package.dart';
 
@@ -58,7 +55,7 @@ class BookingOne extends StatelessWidget {
                       ),
                     ),
                     getpadding(
-                      [270, 0, 0, 0],
+                      [260, 0, 0, 0],
                       InkWell(
                         child: Text(
                           "Map",

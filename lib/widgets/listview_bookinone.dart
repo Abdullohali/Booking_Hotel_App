@@ -1,9 +1,12 @@
+import 'dart:io';
+
 import 'package:bookinghotelapp/components/import_package.dart';
 import 'package:bookinghotelapp/models/hote_model.dart';
 import 'package:bookinghotelapp/screen/selectromm/select_room.dart';
 import 'package:bookinghotelapp/service/fetch_model.dart';
 import 'package:bookinghotelapp/widgets/inkwell.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 
@@ -11,51 +14,63 @@ listviewbookone1(context) {
   return FutureBuilder(
       future: HotelService().getHotel(),
       builder: (context, AsyncSnapshot<List<HotelModel>> snap) {
-        return ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (_, __) {
-              return InkWell(
-                child: Stack(
-                  children: [
-                    Container(
-                      margin: FromLTRB.getEgdeInsets(5, 21, 19, 0),
-                      height: getUniqueHeight(117),
-                      width: getUniqueWidth(197),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(getUniqueWidth(30)),
-                        image: DecorationImage(
-                            image: CachedNetworkImageProvider(
-                              "https://source.unsplash.com/1600x900/?hotel/$__",
-                            ),
-                            fit: BoxFit.cover),
+        if (snap.hasData) {
+          return ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (_, __) {
+                return InkWell(
+                  child: Stack(
+                    children: [
+                      Container(
+                        margin: FromLTRB.getEgdeInsets(5, 21, 19, 0),
+                        height: getUniqueHeight(117),
+                        width: getUniqueWidth(197),
+                        decoration: BoxDecoration(
+                          borderRadius:
+                              BorderRadius.circular(getUniqueWidth(30)),
+                          image: DecorationImage(
+                              image: CachedNetworkImageProvider(
+                                "https://source.unsplash.com/1600x900/?hotel/$__",
+                              ),
+                              fit: BoxFit.cover),
+                        ),
                       ),
-                    ),
-                    Positioned(
-                      top: 12,
-                      left: 130,
-                      child: starcontainer("4.5"),
-                    ),
-                    Positioned(
-                        top: 100,
-                        left: 10,
-                        child: Text(
-                          snap.data![__].name.toString(),
-                          style: googleFonts(16, FontWeight.w700,
-                              color: constColor.kWhite),
-                        ))
-                  ],
-                ),
-                onTap: () => Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => SelectRoom())),
-              );
-            });
+                      Positioned(
+                        top: 12,
+                        left: 130,
+                        child: starcontainer("4.5"),
+                      ),
+                      Positioned(
+                          top: 100,
+                          left: 10,
+                          child: Text(
+                            snap.data![__].name.toString(),
+                            style: googleFonts(16, FontWeight.w700,
+                                color: constColor.kWhite),
+                          ))
+                    ],
+                  ),
+                  onTap: () => Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => SelectRoom())),
+                );
+              });
+        } else if (snap.hasError) {
+          return Center(child: Text("${snap.error}"));
+        } else {
+          return Center(
+            child: Platform.isAndroid
+                ? const CircularProgressIndicator()
+                : const CupertinoActivityIndicator(),
+          );
+        }
       });
 }
 
 listviewbuilder2(context) {
   return FutureBuilder(
-      future: HotelService().getHotel(),
-      builder: (context, AsyncSnapshot<List<HotelModel>> snap) {
+    future: HotelService().getHotel(),
+    builder: (context, AsyncSnapshot<List<HotelModel>> snap) {
+      if (snap.hasData) {
         return ListView.builder(
           itemBuilder: (_, __) {
             return InkWell(
@@ -146,7 +161,17 @@ listviewbuilder2(context) {
           },
           itemCount: snap.data!.length,
         );
-      });
+      } else if (snap.hasError) {
+        return Center(child: Text("${snap.error}"));
+      } else {
+        return Center(
+          child: Platform.isAndroid
+              ? const CircularProgressIndicator()
+              : const CupertinoActivityIndicator(),
+        );
+      }
+    },
+  );
 }
 
 Container starcontainer(String number) {

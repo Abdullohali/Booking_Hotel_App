@@ -16,7 +16,7 @@ class MapPage extends StatelessWidget {
           child: Column(
             children: [
               listtileformapandbooking(),
-              Container(
+              SizedBox(
                 height: getUniqueHeight(50),
                 child: Row(
                   children: [
@@ -47,7 +47,7 @@ class MapPage extends StatelessWidget {
                       ),
                     ),
                     getpadding(
-                      [260, 0, 0, 0],
+                      [230, 0, 0, 0],
                       InkWell(
                         child: Text(
                           "List view",
@@ -75,9 +75,7 @@ class MapPage extends StatelessWidget {
                   ),
                   Positioned(
                     top: 420,
-                    child: Container(
-                      height: getUniqueHeight(159),
-                      width: getUniqueWidth(413),
+                    child: SizedBox(
                       child: listviewbookone1(context),
                     ),
                   )
